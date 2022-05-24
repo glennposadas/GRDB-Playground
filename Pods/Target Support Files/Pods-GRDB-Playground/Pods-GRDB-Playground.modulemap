@@ -1,0 +1,6 @@
+framework module Pods_GRDB_Playground {
+  umbrella header "Pods-GRDB-Playground-umbrella.h"
+
+  export *
+  module * { export * }
+}

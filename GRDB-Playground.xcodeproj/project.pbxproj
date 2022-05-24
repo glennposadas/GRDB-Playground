@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4520533E2839655A00E646F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520533D2839655A00E646F8 /* AppDelegate.swift */; };
+		452053402839655A00E646F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4520533F2839655A00E646F8 /* SceneDelegate.swift */; };
+		452053422839655A00E646F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452053412839655A00E646F8 /* ViewController.swift */; };
+		452053452839655A00E646F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452053432839655A00E646F8 /* Main.storyboard */; };
+		452053472839655C00E646F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452053462839655C00E646F8 /* Assets.xcassets */; };
+		4520534A2839655C00E646F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452053482839655C00E646F8 /* LaunchScreen.storyboard */; };
+		45205365283965FF00E646F8 /* AppDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45205352283965FF00E646F8 /* AppDB.swift */; };
+		45205373283965FF00E646F8 /* v1.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45205361283965FF00E646F8 /* v1.0.swift */; };
+		45205375283965FF00E646F8 /* ChaosDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45205363283965FF00E646F8 /* ChaosDatabase.swift */; };
+		45205376283965FF00E646F8 /* AppDB+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45205364283965FF00E646F8 /* AppDB+Shared.swift */; };
+		452053782839664700E646F8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452053772839664700E646F8 /* Post.swift */; };
+		4520537A2839D1C700E646F8 /* LoremSwiftnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452053792839D1C600E646F8 /* LoremSwiftnum.swift */; };
+		AF66180D3FBDC002F4A7939A /* Pods_GRDB_Playground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA20834A71A67CD640EE63A /* Pods_GRDB_Playground.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C25FEEDAAC72C0094EF9D01 /* Pods-GRDB-Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRDB-Playground.release.xcconfig"; path = "Target Support Files/Pods-GRDB-Playground/Pods-GRDB-Playground.release.xcconfig"; sourceTree = "<group>"; };
+		4520533A2839655A00E646F8 /* GRDB-Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRDB-Playground.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4520533D2839655A00E646F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4520533F2839655A00E646F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		452053412839655A00E646F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		452053442839655A00E646F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		452053462839655C00E646F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		452053492839655C00E646F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4520534B2839655C00E646F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45205352283965FF00E646F8 /* AppDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDB.swift; sourceTree = "<group>"; };
+		45205361283965FF00E646F8 /* v1.0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = v1.0.swift; sourceTree = "<group>"; };
+		45205363283965FF00E646F8 /* ChaosDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaosDatabase.swift; sourceTree = "<group>"; };
+		45205364283965FF00E646F8 /* AppDB+Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDB+Shared.swift"; sourceTree = "<group>"; };
+		452053772839664700E646F8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		452053792839D1C600E646F8 /* LoremSwiftnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremSwiftnum.swift; sourceTree = "<group>"; };
+		8E94985937E57403CE4EA6EB /* Pods-GRDB-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRDB-Playground.debug.xcconfig"; path = "Target Support Files/Pods-GRDB-Playground/Pods-GRDB-Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		BBA20834A71A67CD640EE63A /* Pods_GRDB_Playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRDB_Playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		452053372839655A00E646F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF66180D3FBDC002F4A7939A /* Pods_GRDB_Playground.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		452053312839655A00E646F8 = {
+			isa = PBXGroup;
+			children = (
+				4520533C2839655A00E646F8 /* GRDB-Playground */,
+				4520533B2839655A00E646F8 /* Products */,
+				5F307B4BAA437B4CCD1A4845 /* Pods */,
+				EA2A4B63120F72F153CA5ABA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4520533B2839655A00E646F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4520533A2839655A00E646F8 /* GRDB-Playground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4520533C2839655A00E646F8 /* GRDB-Playground */ = {
+			isa = PBXGroup;
+			children = (
+				45205351283965FF00E646F8 /* Database */,
+				4520533D2839655A00E646F8 /* AppDelegate.swift */,
+				4520533F2839655A00E646F8 /* SceneDelegate.swift */,
+				452053412839655A00E646F8 /* ViewController.swift */,
+				452053432839655A00E646F8 /* Main.storyboard */,
+				452053462839655C00E646F8 /* Assets.xcassets */,
+				452053482839655C00E646F8 /* LaunchScreen.storyboard */,
+				4520534B2839655C00E646F8 /* Info.plist */,
+				452053792839D1C600E646F8 /* LoremSwiftnum.swift */,
+			);
+			path = "GRDB-Playground";
+			sourceTree = "<group>";
+		};
+		45205351283965FF00E646F8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				452053772839664700E646F8 /* Post.swift */,
+				45205352283965FF00E646F8 /* AppDB.swift */,
+				45205353283965FF00E646F8 /* Migrations */,
+				45205363283965FF00E646F8 /* ChaosDatabase.swift */,
+				45205364283965FF00E646F8 /* AppDB+Shared.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		45205353283965FF00E646F8 /* Migrations */ = {
+			isa = PBXGroup;
+			children = (
+				45205361283965FF00E646F8 /* v1.0.swift */,
+			);
+			path = Migrations;
+			sourceTree = "<group>";
+		};
+		5F307B4BAA437B4CCD1A4845 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E94985937E57403CE4EA6EB /* Pods-GRDB-Playground.debug.xcconfig */,
+				0C25FEEDAAC72C0094EF9D01 /* Pods-GRDB-Playground.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA2A4B63120F72F153CA5ABA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBA20834A71A67CD640EE63A /* Pods_GRDB_Playground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		452053392839655A00E646F8 /* GRDB-Playground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4520534E2839655C00E646F8 /* Build configuration list for PBXNativeTarget "GRDB-Playground" */;
+			buildPhases = (
+				AE923618E7D31A6FCC2FBBD4 /* [CP] Check Pods Manifest.lock */,
+				452053362839655A00E646F8 /* Sources */,
+				452053372839655A00E646F8 /* Frameworks */,
+				452053382839655A00E646F8 /* Resources */,
+				79822C3FA795576F847AB9EA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GRDB-Playground";
+			productName = "GRDB-Playground";
+			productReference = 4520533A2839655A00E646F8 /* GRDB-Playground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		452053322839655A00E646F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					452053392839655A00E646F8 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 452053352839655A00E646F8 /* Build configuration list for PBXProject "GRDB-Playground" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 452053312839655A00E646F8;
+			productRefGroup = 4520533B2839655A00E646F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				452053392839655A00E646F8 /* GRDB-Playground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		452053382839655A00E646F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4520534A2839655C00E646F8 /* LaunchScreen.storyboard in Resources */,
+				452053472839655C00E646F8 /* Assets.xcassets in Resources */,
+				452053452839655A00E646F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79822C3FA795576F847AB9EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GRDB-Playground/Pods-GRDB-Playground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GRDB-Playground/Pods-GRDB-Playground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GRDB-Playground/Pods-GRDB-Playground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE923618E7D31A6FCC2FBBD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GRDB-Playground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		452053362839655A00E646F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45205375283965FF00E646F8 /* ChaosDatabase.swift in Sources */,
+				452053422839655A00E646F8 /* ViewController.swift in Sources */,
+				45205365283965FF00E646F8 /* AppDB.swift in Sources */,
+				452053782839664700E646F8 /* Post.swift in Sources */,
+				4520537A2839D1C700E646F8 /* LoremSwiftnum.swift in Sources */,
+				45205373283965FF00E646F8 /* v1.0.swift in Sources */,
+				4520533E2839655A00E646F8 /* AppDelegate.swift in Sources */,
+				452053402839655A00E646F8 /* SceneDelegate.swift in Sources */,
+				45205376283965FF00E646F8 /* AppDB+Shared.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		452053432839655A00E646F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452053442839655A00E646F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		452053482839655C00E646F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452053492839655C00E646F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4520534C2839655C00E646F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4520534D2839655C00E646F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4520534F2839655C00E646F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E94985937E57403CE4EA6EB /* Pods-GRDB-Playground.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RE4YFXSB23;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GRDB-Playground/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.glennposadas.example.GRDB-Playground";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		452053502839655C00E646F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C25FEEDAAC72C0094EF9D01 /* Pods-GRDB-Playground.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RE4YFXSB23;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "GRDB-Playground/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.glennposadas.example.GRDB-Playground";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		452053352839655A00E646F8 /* Build configuration list for PBXProject "GRDB-Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4520534C2839655C00E646F8 /* Debug */,
+				4520534D2839655C00E646F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4520534E2839655C00E646F8 /* Build configuration list for PBXNativeTarget "GRDB-Playground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4520534F2839655C00E646F8 /* Debug */,
+				452053502839655C00E646F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 452053322839655A00E646F8 /* Project object */;
+}
