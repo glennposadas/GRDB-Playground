@@ -54,6 +54,18 @@ class VM {
       return nil
     }
   }
+  
+  func allPosts() -> [Post]? {
+    do {
+      let posts = try AppDB.shared.dbWriter.read { db in
+        try Post
+          .fetchAll(db)
+      }
+      return posts
+    } catch {
+      return nil
+    }
+  }
 }
 
 // MARK: - ViewController
@@ -65,7 +77,11 @@ class ViewController: UITableViewController {
   
   let vm = VM()
   
-  typealias DS = UITableViewDiffableDataSource<Int, Post>
+  enum Section: Hashable {
+    case main
+  }
+  
+  typealias DS = UITableViewDiffableDataSource<Section, Post>
   
   lazy var datasource: DS = {
     let datasource = DS(tableView: tableView, cellProvider: { (tableView, indexPath, post) -> Cell? in
@@ -81,38 +97,70 @@ class ViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    vm
-      .postPublisher
-      .removeDuplicates()
-      .sink { completion in
-        
-      } receiveValue: { [weak self] posts in
-        
-        guard let self = self else {
-          return
-        }
-        
-        print("===============")
-        print("RECEIVE VALUE! ✅: \(posts)")
-        print("===============")
-        
-        var snapshot = self.datasource.snapshot()
-        snapshot.deleteAllItems()
-        
-        snapshot.appendSections([0])
-        snapshot.appendItems(posts, toSection: 0)
-        self.datasource.apply(snapshot)
-        
-        self.tableView.scrollToRow(at: IndexPath(row: posts.count - 1, section: 0), at: .bottom, animated: true)
-        
-      }.store(in: &cancellables)
+//    vm
+//      .postPublisher
+//      .removeDuplicates()
+//      .sink { completion in
+//
+//      } receiveValue: { [weak self] posts in
+//
+//        guard let self = self else {
+//          return
+//        }
+//
+//        print("===============")
+//        print("RECEIVE VALUE! ✅: \(posts)")
+//        print("===============")
+//
+//        var snapshot = self.datasource.snapshot()
+//
+//        if !snapshot.sectionIdentifiers.contains(.main) {
+//          snapshot.appendSections([.main])
+//        }
+//
+//        snapshot.appendItems(posts, toSection: .main)
+//        self.datasource.apply(snapshot)
+//
+//        self.tableView.scrollToRow(at: IndexPath(row: posts.count - 1, section: 0), at: .bottom, animated: true)
+//
+//      }.store(in: &cancellables)
+    
+    guard let posts = vm.allPosts() else {
+      return
+    }
+    
+    var snapshot = self.datasource.snapshot()
+    
+    if !snapshot.sectionIdentifiers.contains(.main) {
+      snapshot.appendSections([.main])
+    }
+    
+    snapshot.appendItems(posts, toSection: .main)
+    self.datasource.apply(snapshot)
+    
+    self.tableView.scrollToRow(at: IndexPath(row: posts.count - 1, section: 0), at: .bottom, animated: true)
   }
   
   @IBAction func newPost(_ sender: Any) {
-    let p = vm.newPost()
-    vm.savePost(p)
+    let a = vm.newPost()
+    vm.savePost(a)
+    
+    let p = vm.post(a.id)!
+    
+    var snapshot = datasource.snapshot()
+
+    snapshot.appendItems([p], toSection: .main)
+    datasource.apply(snapshot)
+    
+    tableView.scrollToRow(at: IndexPath(row: snapshot.numberOfItems - 1, section: 0), at: .bottom, animated: true)
   }
   
+  @IBAction func add100Posts(_ sender: Any) {
+    for _ in 1...3000 {
+      let p = vm.newPost()
+      vm.savePost(p)
+    }
+  }
 }
 
 // MARK: - UITableViewCell

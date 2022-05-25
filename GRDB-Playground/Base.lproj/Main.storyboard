@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--POSTS-->
         <scene sceneID="nGt-bV-sU8">
             <objects>
                 <tableViewController id="Hkl-nd-jL5" customClass="ViewController" customModule="GRDB_Playground" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,12 @@
                             <outlet property="delegate" destination="Hkl-nd-jL5" id="Pc2-T1-2kF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="m7k-4k-qz5">
+                    <navigationItem key="navigationItem" title="POSTS" id="m7k-4k-qz5">
+                        <barButtonItem key="leftBarButtonItem" title="Add 100 posts" id="MZZ-tX-45C">
+                            <connections>
+                                <action selector="add100Posts:" destination="Hkl-nd-jL5" id="Uir-hB-dJX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New Post" id="zyA-qC-7C6">
                             <connections>
                                 <action selector="newPost:" destination="Hkl-nd-jL5" id="VvZ-lD-FD6"/>
