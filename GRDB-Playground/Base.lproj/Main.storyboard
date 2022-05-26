@@ -61,16 +61,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="POSTS" id="m7k-4k-qz5">
-                        <barButtonItem key="leftBarButtonItem" title="Add 100 posts" id="MZZ-tX-45C">
+                        <barButtonItem key="leftBarButtonItem" title="+100 posts" id="MZZ-tX-45C">
                             <connections>
                                 <action selector="add100Posts:" destination="Hkl-nd-jL5" id="Uir-hB-dJX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New Post" id="zyA-qC-7C6">
-                            <connections>
-                                <action selector="newPost:" destination="Hkl-nd-jL5" id="VvZ-lD-FD6"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="NEW" id="zyA-qC-7C6">
+                                <connections>
+                                    <action selector="newPost:" destination="Hkl-nd-jL5" id="VvZ-lD-FD6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="EDIT LAST" id="hgb-Ud-aE7">
+                                <connections>
+                                    <action selector="editLastPost:" destination="Hkl-nd-jL5" id="aEq-AH-Rfy"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAT-bK-FSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

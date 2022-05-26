@@ -97,33 +97,33 @@ class ViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    vm
-//      .postPublisher
-//      .removeDuplicates()
-//      .sink { completion in
-//
-//      } receiveValue: { [weak self] posts in
-//
-//        guard let self = self else {
-//          return
-//        }
-//
-//        print("===============")
-//        print("RECEIVE VALUE! ✅: \(posts)")
-//        print("===============")
-//
-//        var snapshot = self.datasource.snapshot()
-//
-//        if !snapshot.sectionIdentifiers.contains(.main) {
-//          snapshot.appendSections([.main])
-//        }
-//
-//        snapshot.appendItems(posts, toSection: .main)
-//        self.datasource.apply(snapshot)
-//
-//        self.tableView.scrollToRow(at: IndexPath(row: posts.count - 1, section: 0), at: .bottom, animated: true)
-//
-//      }.store(in: &cancellables)
+    //    vm
+    //      .postPublisher
+    //      .removeDuplicates()
+    //      .sink { completion in
+    //
+    //      } receiveValue: { [weak self] posts in
+    //
+    //        guard let self = self else {
+    //          return
+    //        }
+    //
+    //        print("===============")
+    //        print("RECEIVE VALUE! ✅: \(posts)")
+    //        print("===============")
+    //
+    //        var snapshot = self.datasource.snapshot()
+    //
+    //        if !snapshot.sectionIdentifiers.contains(.main) {
+    //          snapshot.appendSections([.main])
+    //        }
+    //
+    //        snapshot.appendItems(posts, toSection: .main)
+    //        self.datasource.apply(snapshot)
+    //
+    //        self.tableView.scrollToRow(at: IndexPath(row: posts.count - 1, section: 0), at: .bottom, animated: true)
+    //
+    //      }.store(in: &cancellables)
     
     guard let posts = vm.allPosts() else {
       return
@@ -148,7 +148,7 @@ class ViewController: UITableViewController {
     let p = vm.post(a.id)!
     
     var snapshot = datasource.snapshot()
-
+    
     snapshot.appendItems([p], toSection: .main)
     datasource.apply(snapshot)
     
@@ -156,10 +156,34 @@ class ViewController: UITableViewController {
   }
   
   @IBAction func add100Posts(_ sender: Any) {
-    for _ in 1...3000 {
+    for _ in 1...100 {
       let p = vm.newPost()
       vm.savePost(p)
     }
+  }
+  
+  @IBAction func editLastPost(_ sender: Any) {
+    guard let posts = vm.allPosts() else {
+      return
+    }
+    
+    print("Post count: \(posts.count)")
+    
+    guard var last = posts.last else {
+      return
+    }
+    
+    var snapshot = datasource.snapshot()
+    
+    snapshot.deleteItems([last])
+    
+    last.content = last.content + "✅"
+    try? AppDB.shared.save(&last)
+    
+    snapshot.appendItems([last], toSection: .main)
+    datasource.apply(snapshot)
+    
+    tableView.scrollToRow(at: IndexPath(row: snapshot.numberOfItems - 1, section: 0), at: .bottom, animated: true)
   }
 }
 
